@@ -1,10 +1,11 @@
 {
-  "name": "1_WebPack",
+  "name": "cours-miw-2020",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=development",
     "watch": "npm run build && npm-run-all --parallel watch:server watch:build",
     "watch:build": "webpack --mode=development --watch",
     "watch:server": "nodemon --inspect=9223 \"./dist/index.js\" --watch \"./dist\""
@@ -20,6 +21,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   }
 }
